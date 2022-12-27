@@ -1,0 +1,11 @@
+### Users create (signup)
+POST http://localhost:3000/students.json
+Content-Type: application/json
+
+{
+  "first_name": "Test",
+  "last_name": "Name",
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
