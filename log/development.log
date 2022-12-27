@@ -77,3 +77,41 @@ Migrating to CreateExperiences (20221227020115)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4754250696820776690)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/students.json" for 127.0.0.1 at 2022-12-26 21:15:50 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#create as JSON
+  Parameters: {"first_name"=>"Test", "last_name"=>"Name", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "student"=>{"first_name"=>"Test", "last_name"=>"Name", "email"=>"test@test.com"}}
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 46.9ms | Allocations: 16502)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<Student id: nil, first_name: "Test", last_name: "Name", email: "test@test.com", phone_number: nil, short_bio: nil, linkedin_url: nil, twitter_handle: nil, personal_site_url: nil, online_resume_url: nil, github_url: nil, photo_url: nil, created_at: nil, updated_at: nil>
+Did you mean?  password=):
+  
+app/controllers/students_controller.rb:3:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4754250696820776690)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordToStudent (20221227021822)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.0ms)[0m  [1m[35mALTER TABLE "students" ADD "password" character varying[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "students" ADD "password_digest" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221227021822"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4754250696820776690)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/students.json" for 127.0.0.1 at 2022-12-26 21:20:29 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#create as JSON
+  Parameters: {"first_name"=>"Test", "last_name"=>"Name", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "student"=>{"first_name"=>"Test", "last_name"=>"Name", "email"=>"test@test.com", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/students_controller.rb:11:in `create'
+  [1m[36mStudent Exists? (4.7ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:11:in `create'
+  [1m[36mStudent Create (2.4ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "email", "phone_number", "short_bio", "linkedin_url", "twitter_handle", "personal_site_url", "online_resume_url", "github_url", "photo_url", "created_at", "updated_at", "password", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["first_name", "Test"], ["last_name", "Name"], ["email", "test@test.com"], ["phone_number", nil], ["short_bio", nil], ["linkedin_url", nil], ["twitter_handle", nil], ["personal_site_url", nil], ["online_resume_url", nil], ["github_url", nil], ["photo_url", nil], ["created_at", "2022-12-27 02:20:29.867813"], ["updated_at", "2022-12-27 02:20:29.867813"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  ↳ app/controllers/students_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/students_controller.rb:11:in `create'
+Completed 201 Created in 260ms (Views: 0.2ms | ActiveRecord: 11.4ms | Allocations: 15232)
+
+
