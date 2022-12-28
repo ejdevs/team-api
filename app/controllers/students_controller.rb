@@ -41,9 +41,11 @@ class StudentsController < ApplicationController
       photo_url: params[:photo_url] || student.photo_url,
     )
     if student.save
-    render json: student.as_json
+      render json: { message: "Student updated successfully" }, status: :updated
+    else
+      render json: { errors: student.errors.full_messages }, status: :bad_request
+    end
   end
-end
 
   def destroy
     id = params[:id]
