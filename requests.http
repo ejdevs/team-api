@@ -1,3 +1,7 @@
+### Students Index
+GET http://localhost:3000/students.json
+
+
 ### Users create (signup)
 POST http://localhost:3000/students.json
 Content-Type: application/json
@@ -9,3 +13,4 @@ Content-Type: application/json
   "password": "password",
   "password_confirmation": "password"
 }
+
