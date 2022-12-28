@@ -395,3 +395,96 @@ Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 7.2ms | Allocations: 1363
   [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
   [1m[36mCapstone Create (0.7ms)[0m  [1m[32mINSERT INTO "capstones" ("name", "description", "url", "screenshot", "created_at", "updated_at", "student_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "My Capstone"], ["description", "description of capstone"], ["url", "google.com"], ["screenshot", "screenshot goes here"], ["created_at", "2022-12-28 02:55:49.312365"], ["updated_at", "2022-12-28 02:55:49.312365"], ["student_id", 2]]
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/students" for ::1 at 2022-12-27 21:57:36 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (1.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 6.4ms | Allocations: 15254)
+
+
+Started GET "/experiences" for ::1 at 2022-12-27 21:57:42 -0500
+  
+SyntaxError (/Users/juliagrimes/Documents/Actualize/team-api/app/controllers/experiences_controller.rb:52: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/experiences_controller.rb:52: syntax error, unexpected `end', expecting end-of-input
+app/controllers/experiences_controller.rb:52: syntax error, unexpected `end', expecting end-of-input
+Started GET "/experiences" for ::1 at 2022-12-27 21:58:04 -0500
+Processing by ExperiencesController#index as HTML
+  [1m[36mExperience Load (1.1ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences" ORDER BY "experiences"."id" ASC[0m
+  ↳ app/controllers/experiences_controller.rb:6:in `index'
+Completed 200 OK in 21ms (Views: 3.3ms | ActiveRecord: 3.9ms | Allocations: 6865)
+
+
+Started GET "/educations" for ::1 at 2022-12-27 21:58:08 -0500
+  
+SyntaxError (/Users/juliagrimes/Documents/Actualize/team-api/app/controllers/educations_controller.rb:51: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/educations_controller.rb:51: syntax error, unexpected `end', expecting end-of-input
+app/controllers/educations_controller.rb:51: syntax error, unexpected `end', expecting end-of-input
+Started GET "/educations" for ::1 at 2022-12-27 21:58:17 -0500
+Processing by EducationsController#index as HTML
+  [1m[36mEducation Load (0.3ms)[0m  [1m[34mSELECT "educations".* FROM "educations" ORDER BY "educations"."id" ASC[0m
+  ↳ app/controllers/educations_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 2.3ms | ActiveRecord: 4.1ms | Allocations: 5497)
+
+
+Started GET "/skills" for ::1 at 2022-12-27 21:58:23 -0500
+  
+SyntaxError (/Users/juliagrimes/Documents/Actualize/team-api/app/controllers/skills_controller.rb:44: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/skills_controller.rb:44: syntax error, unexpected `end', expecting end-of-input
+app/controllers/skills_controller.rb:44: syntax error, unexpected `end', expecting end-of-input
+Started GET "/skills" for ::1 at 2022-12-27 21:58:31 -0500
+Processing by SkillsController#index as HTML
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT "skills".* FROM "skills" ORDER BY "skills"."id" ASC[0m
+  ↳ app/controllers/skills_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 4.9ms | Allocations: 4232)
+
+
+Started GET "/capstones" for ::1 at 2022-12-27 21:59:47 -0500
+  
+SyntaxError (/Users/juliagrimes/Documents/Actualize/team-api/app/controllers/capstones_controller.rb:49: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/capstones_controller.rb:49: syntax error, unexpected `end', expecting end-of-input
+app/controllers/capstones_controller.rb:49: syntax error, unexpected `end', expecting end-of-input
+Started GET "/capstones" for ::1 at 2022-12-27 21:59:55 -0500
+Processing by CapstonesController#index as HTML
+  [1m[36mCapstone Load (0.6ms)[0m  [1m[34mSELECT "capstones".* FROM "capstones" ORDER BY "capstones"."id" ASC[0m
+  ↳ app/controllers/capstones_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 2.1ms | ActiveRecord: 6.0ms | Allocations: 5736)
+
+
+Started PATCH "/experiences/1.json" for 127.0.0.1 at 2022-12-27 22:04:50 -0500
+Processing by ExperiencesController#update as JSON
+  Parameters: {"start_date"=>"2018-01-01", "end_date"=>"2020-01-02", "job_title"=>"Lead Technician", "company_name"=>"Gillette", "details"=>"Working on a factory floor creating razor blades for Fusion line products.", "id"=>"1", "experience"=>{"start_date"=>"2018-01-01", "end_date"=>"2020-01-02", "job_title"=>"Lead Technician", "company_name"=>"Gillette", "details"=>"Working on a factory floor creating razor blades for Fusion line products."}}
+Filter chain halted as :authenticate_student rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 479)
+
+
+Started POST "/sessions.json" for 127.0.0.1 at 2022-12-27 22:04:56 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 279ms (Views: 0.1ms | ActiveRecord: 3.9ms | Allocations: 7683)
+
+
+Started PATCH "/experiences/1.json" for 127.0.0.1 at 2022-12-27 22:05:11 -0500
+Processing by ExperiencesController#update as JSON
+  Parameters: {"start_date"=>"2018-01-01", "end_date"=>"2020-01-02", "job_title"=>"Lead Technician", "company_name"=>"Gillette", "details"=>"Working on a factory floor creating razor blades for Fusion line products.", "id"=>"1", "experience"=>{"start_date"=>"2018-01-01", "end_date"=>"2020-01-02", "job_title"=>"Lead Technician", "company_name"=>"Gillette", "details"=>"Working on a factory floor creating razor blades for Fusion line products."}}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_student'
+  [1m[36mExperience Load (0.3ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences" WHERE "experiences"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/experiences_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/experiences_controller.rb:37:in `update'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/experiences_controller.rb:37:in `update'
+  [1m[36mExperience Update (0.3ms)[0m  [1m[33mUPDATE "experiences" SET "start_date" = $1, "end_date" = $2, "job_title" = $3, "company_name" = $4, "details" = $5, "updated_at" = $6 WHERE "experiences"."id" = $7[0m  [["start_date", "2018-01-01"], ["end_date", "2020-01-02"], ["job_title", "Lead Technician"], ["company_name", "Gillette"], ["details", "Working on a factory floor creating razor blades for Fusion line products."], ["updated_at", "2022-12-28 03:05:11.047180"], ["id", 1]]
+  ↳ app/controllers/experiences_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/experiences_controller.rb:37:in `update'
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 7.0ms | Allocations: 8293)
+
+

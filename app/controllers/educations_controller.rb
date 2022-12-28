@@ -1,6 +1,6 @@
 class EducationsController < ApplicationController
   before_action :authenticate_student, except: [:index, :show]
-  
+
   def index
     educations = Education.all.order(:id)
     render json: educations
@@ -31,7 +31,7 @@ class EducationsController < ApplicationController
     education = Education.find_by(id: params[:id])
     education.degree = params[:degree] || education.degree
     education.details = params[:details] || education.details
-    education.start_date = params[:start_date] ||  education.start_date 
+    education.start_date = params[:start_date] || education.start_date
     education.end_date = params[:end_date] || education.end_date
     if education.save
       render json: education
@@ -45,7 +45,4 @@ class EducationsController < ApplicationController
     education.destroy
     render json: { message: "Education record successfully destroyed!" }
   end
-end
-
-
 end

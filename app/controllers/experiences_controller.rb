@@ -1,6 +1,6 @@
 class ExperiencesController < ApplicationController
   before_action :authenticate_student, except: [:index, :show]
-  
+
   def index
     experiences = Experience.all.order(:id)
     render json: experiences
@@ -32,7 +32,7 @@ class ExperiencesController < ApplicationController
     experience.job_title = params[:job_title] || experience.job_title
     experience.details = params[:details] || experience.details
     experience.company_name = params[:company_name] || experience.company_name
-    experience.start_date = params[:start_date] ||  experience.start_date 
+    experience.start_date = params[:start_date] || experience.start_date
     experience.end_date = params[:end_date] || experience.end_date
     if experience.save
       render json: experience
@@ -46,7 +46,4 @@ class ExperiencesController < ApplicationController
     education.destroy
     render json: { message: "Experience record successfully destroyed!" }
   end
-end
-
-
 end
