@@ -1,7 +1,6 @@
 class SkillsController < ApplicationController
-  
   before_action :authenticate_student, except: [:index, :show]
-  
+
   def index
     skills = Skill.all.order(:id)
     render json: skills
@@ -10,7 +9,7 @@ class SkillsController < ApplicationController
   def create
     skill = Skill.new(
       student_id: current_student.id,
-      name: params[:name]
+      name: params[:name],
     )
     if skill.save
       render json: skill
@@ -39,6 +38,4 @@ class SkillsController < ApplicationController
     skill.destroy
     render json: { message: "Skill successfully destroyed!" }
   end
-end
-
 end

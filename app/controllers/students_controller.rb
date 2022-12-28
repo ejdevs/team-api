@@ -33,7 +33,7 @@ class StudentsController < ApplicationController
       email: params[:email] || student.email,
       phone_number: params[:phone_number] || student.phone_number,
       short_bio: params[:short_bio] || student.short_bio,
-      linkedin_url: params[:linkedin_url] || student,linkedin_url,
+      linkedin_url: params[:linkedin_url] || student.linkedin_url,
       twitter_handle: params[:twitter_handle] || student.twitter_handle,
       personal_site_url: params[:personal_site_url] || student.personal_site_url,
       online_resume_url: params[:online_resume_url] || student.online_resume_url,
