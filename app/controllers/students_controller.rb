@@ -28,7 +28,7 @@ class StudentsController < ApplicationController
   def update
     student = Student.find_by(id: params[:id])
     student.update(
-      first_name: params[:name] || student.first_name,
+      first_name: params[:first_name] || student.first_name,
       last_name: params[:last_name] || student.last_name,
       email: params[:email] || student.email,
       phone_number: params[:phone_number] || student.phone_number,
