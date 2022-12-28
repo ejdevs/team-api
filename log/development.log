@@ -310,3 +310,88 @@ Migrating to AddStudentIdToAssociations (20221228002831)
   [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4754250696820776690)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 >>>>>>> 5e4db42b2c04249586503521bbc29117bd78c16d
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4754250696820776690)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(4754250696820776690)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-12-27 21:14:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 586)
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 4510)
+
+
+Started GET "/students" for ::1 at 2022-12-27 21:14:04 -0500
+  
+SyntaxError (/Users/juliagrimes/Documents/Actualize/team-api/app/controllers/students_controller.rb:36: syntax error, unexpected ',', expecting =>
+...n_url] || student,linkedin_url,
+...                              ^
+/Users/juliagrimes/Documents/Actualize/team-api/app/controllers/students_controller.rb:37: syntax error, unexpected ',', expecting `end'
+...dle] || student.twitter_handle,
+...                              ^
+/Users/juliagrimes/Documents/Actualize/team-api/app/controllers/students_controller.rb:38: syntax error, unexpected ',', expecting `end'
+...] || student.personal_site_url,
+...                              ^
+/Users/juliagrimes/Documents/Actualize/team-api/app/controllers/students_controller.rb:39: syntax error, unexpected ',', expecting `end'
+...] || student.online_resume_url,
+...                              ^
+/Users/juliagrimes/Documents/Actualize/team-api/app/controllers/students_controller.rb:40: syntax error, unexpected ',', expecting `end'
+...hub_url] || student.github_url,
+...                              ^
+/Users/juliagrimes/Documents/Actualize/team-api/app/controllers/students_controller.rb:41: syntax error, unexpected ',', expecting `end'
+...hoto_url] || student.photo_url,
+...                              ^
+):
+  
+app/controllers/students_controller.rb:36: syntax error, unexpected ',', expecting =>
+app/controllers/students_controller.rb:37: syntax error, unexpected ',', expecting `end'
+app/controllers/students_controller.rb:38: syntax error, unexpected ',', expecting `end'
+app/controllers/students_controller.rb:39: syntax error, unexpected ',', expecting `end'
+app/controllers/students_controller.rb:40: syntax error, unexpected ',', expecting `end'
+app/controllers/students_controller.rb:41: syntax error, unexpected ',', expecting `end'
+app/controllers/students_controller.rb:36: syntax error, unexpected ',', expecting =>
+app/controllers/students_controller.rb:37: syntax error, unexpected ',', expecting `end'
+app/controllers/students_controller.rb:38: syntax error, unexpected ',', expecting `end'
+app/controllers/students_controller.rb:39: syntax error, unexpected ',', expecting `end'
+app/controllers/students_controller.rb:40: syntax error, unexpected ',', expecting `end'
+app/controllers/students_controller.rb:41: syntax error, unexpected ',', expecting `end'
+Started GET "/students" for ::1 at 2022-12-27 21:15:14 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (1.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 7.2ms | Allocations: 13631)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "test@person.com"], ["LIMIT", 1]]
+  [1m[36mStudent Create (0.7ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "email", "phone_number", "short_bio", "linkedin_url", "twitter_handle", "personal_site_url", "online_resume_url", "github_url", "photo_url", "created_at", "updated_at", "password", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["first_name", "First"], ["last_name", "Last Name"], ["email", "test@person.com"], ["phone_number", 3526], ["short_bio", "I'm a person"], ["linkedin_url", "https://www.linkedin.com/in/adam-folta/"], ["twitter_handle", "twitter"], ["personal_site_url", "site"], ["online_resume_url", "https://via.placeholder.com/150"], ["github_url", "afolta"], ["photo_url", "photo"], ["created_at", "2022-12-28 02:45:36.438769"], ["updated_at", "2022-12-28 02:45:36.438769"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSkill Create (4.9ms)[0m  [1m[32mINSERT INTO "skills" ("skill_name", "created_at", "updated_at", "student_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["skill_name", "Ruby"], ["created_at", "2022-12-28 02:45:36.455895"], ["updated_at", "2022-12-28 02:45:36.455895"], ["student_id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "test@person.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mExperience Create (0.8ms)[0m  [1m[32mINSERT INTO "experiences" ("start_date", "end_date", "job_title", "company_name", "details", "created_at", "updated_at", "student_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["start_date", 20221201], ["end_date", 20240101], ["job_title", "CAD Technician"], ["company_name", "Company X"], ["details", "Created assembly drawings and CAD files for R&D Equipment"], ["created_at", "2022-12-28 02:48:17.768165"], ["updated_at", "2022-12-28 02:48:17.768165"], ["student_id", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEducation Create (2.5ms)[0m  [1m[32mINSERT INTO "educations" ("start_date", "end_date", "degree", "university_name", "details", "created_at", "updated_at", "student_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["start_date", 20221201], ["end_date", 20240101], ["degree", "Bachelor's"], ["university_name", "Columbia"], ["details", "Learned all about everything"], ["created_at", "2022-12-28 02:55:49.303447"], ["updated_at", "2022-12-28 02:55:49.303447"], ["student_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCapstone Create (0.7ms)[0m  [1m[32mINSERT INTO "capstones" ("name", "description", "url", "screenshot", "created_at", "updated_at", "student_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "My Capstone"], ["description", "description of capstone"], ["url", "google.com"], ["screenshot", "screenshot goes here"], ["created_at", "2022-12-28 02:55:49.312365"], ["updated_at", "2022-12-28 02:55:49.312365"], ["student_id", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m

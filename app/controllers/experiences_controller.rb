@@ -1,6 +1,4 @@
 class ExperiencesController < ApplicationController
-
-
   before_action :authenticate_student, except: [:index, :show]
   
   def index

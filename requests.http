@@ -1,7 +1,6 @@
 ### Students Index
 GET http://localhost:3000/students.json
 
-=======
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjoxLCJleHAiOjE2NzIxOTQ4NjN9.GE5nre7a0JoCzVfs7eA-426Ai7RgW9YkqS9F-IOaLzo
 
 ### Users create (signup)
