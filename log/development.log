@@ -115,6 +115,7 @@ Processing by StudentsController#create as JSON
 Completed 201 Created in 260ms (Views: 0.2ms | ActiveRecord: 11.4ms | Allocations: 15232)
 
 
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2022-12-27 18:33:15 -0600
   [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -271,3 +272,41 @@ Processing by StudentsController#index as JSON
 Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1145)
 
 
+=======
+Started POST "/sessions.json" for 127.0.0.1 at 2022-12-26 21:32:51 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 4126)
+
+
+  
+NameError (uninitialized constant SessionsController::User
+
+    user = User.find_by(email: params[:email])
+           ^^^^):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/sessions.json" for 127.0.0.1 at 2022-12-26 21:34:22 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 250ms (Views: 0.1ms | ActiveRecord: 5.4ms | Allocations: 12705)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4754250696820776690)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddStudentIdToAssociations (20221228002831)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.5ms)[0m  [1m[35mALTER TABLE "experiences" DROP COLUMN "user_id"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "experiences" ADD "student_id" integer[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "educations" ADD "student_id" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "capstones" ADD "student_id" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "skills" ADD "student_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221228002831"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4754250696820776690)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+>>>>>>> 5e4db42b2c04249586503521bbc29117bd78c16d

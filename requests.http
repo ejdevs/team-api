@@ -1,6 +1,8 @@
 ### Students Index
 GET http://localhost:3000/students.json
 
+=======
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjoxLCJleHAiOjE2NzIxOTQ4NjN9.GE5nre7a0JoCzVfs7eA-426Ai7RgW9YkqS9F-IOaLzo
 
 ### Users create (signup)
 POST http://localhost:3000/students.json
@@ -14,3 +16,25 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
+
+
+### Experience create
+POST http://localhost:3000/experiences.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "start_date": "2018-01-01",
+  "end_date": "2020-01-02",
+  "job_title": "Technician",
+  "company_name": "Gillette",
+  "details": "Working on a factory floor creating razor blades for Fusion line products."
+}
