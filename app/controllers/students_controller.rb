@@ -5,8 +5,8 @@ class StudentsController < ApplicationController
   end
 
   def show
-    photo = Photo.find_by(id: params[:id])
-    render json: photo.as_json
+    student = student.find_by(id: params[:id])
+    render json: student.as_json
   end
 
   def create
