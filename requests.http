@@ -20,3 +20,17 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password"
 }
+
+
+### Experience create
+POST http://localhost:3000/experiences.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "start_date": "2018-01-01",
+  "end_date": "2020-01-02",
+  "job_title": "Technician",
+  "company_name": "Gillette",
+  "details": "Working on a factory floor creating razor blades for Fusion line products."
+}
