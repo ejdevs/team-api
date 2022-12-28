@@ -3,7 +3,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
   #LOGIN
+  post "/students" => "students#create"
+  get "/students" => "students#index"
+  get "/students/:id" => "students#show"
   post "/sessions" => "sessions#create"
 
   #STUDENTS CRUD
