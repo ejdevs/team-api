@@ -40,7 +40,7 @@ class StudentsController < ApplicationController
       photo_url: params[:photo_url] || student.photo_url,
     )
     if student.save
-      render json: { message: "Student updated successfully" }, status: :updated
+      render json: { message: "Student updated successfully" }, status: 200
     else
       render json: { errors: student.errors.full_messages }, status: :bad_request
     end
