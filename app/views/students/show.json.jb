@@ -1,0 +1,11 @@
+{
+  id: @student.id,
+  first_name: @student.first_name,
+  last_name: @student.last_name,
+  created_at: @student.created_at,
+  updated_at: @student.updated_at,
+  educations: @student.educations,
+  capstones: @student.capstones,
+  skills: @student.skills,
+  experiences: @student.experiences,
+}
