@@ -495,3 +495,1273 @@ Processing by ExperiencesController#index as HTML
 Completed 200 OK in 20ms (Views: 3.0ms | ActiveRecord: 10.5ms | Allocations: 3950)
 
 
+Started GET "/" for ::1 at 2022-12-28 21:06:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 477)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 3075)
+
+
+Started GET "/students" for ::1 at 2022-12-28 21:06:49 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 5.6ms | Allocations: 13531)
+
+
+Started GET "/students/1" for ::1 at 2022-12-28 21:06:51 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 922)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass
+
+    student = student.find_by(id: params[:id])
+                     ^^^^^^^^):
+  
+app/controllers/students_controller.rb:8:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:06:59 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 825)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass
+
+    student = student.find_by(id: params[:id])
+                     ^^^^^^^^):
+  
+app/controllers/students_controller.rb:8:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:07:23 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.0ms | Allocations: 8757)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+
+Did you mean?  rails/conductor/action_mailbox/inbound_emails/show
+               layouts/students/show
+               rails/conductor/action_mailbox/inbound_emails/new
+               rails/conductor/action_mailbox/inbound_emails/sources/new
+               layouts/rails/conductor
+               layouts/mailer):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:08:09 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 5.4ms | Allocations: 7991)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+
+Did you mean?  rails/conductor/action_mailbox/inbound_emails/show
+               layouts/students/show
+               rails/conductor/action_mailbox/inbound_emails/new
+               rails/conductor/action_mailbox/inbound_emails/sources/new
+               layouts/rails/conductor
+               layouts/mailer):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:11:01 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 5.3ms | Allocations: 8079)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:11:03 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 1196)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:11:20 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 1104)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:11:21 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 1116)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:11:21 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms | Allocations: 1105)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:11:21 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 1104)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:11:45 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.7ms | Allocations: 8078)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:11:47 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 1175)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/" for ::1 at 2022-12-28 21:11:49 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (2.8ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 2.8ms | Allocations: 1132)
+
+
+Started GET "/students/" for ::1 at 2022-12-28 21:12:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 8.5ms | Allocations: 13572)
+
+
+Started GET "/students/1" for ::1 at 2022-12-28 21:12:01 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.8ms | Allocations: 3596)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:13:08 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 1630)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:13:09 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms | Allocations: 1197)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:13:09 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms | Allocations: 1100)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:13:35 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 5.0ms | Allocations: 15774)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:13:36 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (2.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.4ms | Allocations: 1239)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:14:31 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 1537)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:14:32 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms | Allocations: 1176)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:14:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 5.4ms | Allocations: 15772)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:14:40 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 1239)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:14:42 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms | Allocations: 1121)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:17:40 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 5.4ms | Allocations: 8091)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:17:45 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 5.0ms | Allocations: 7865)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:17:45 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms | Allocations: 1181)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:19:04 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 7.0ms | Allocations: 7882)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:10:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:19:05 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 1183)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:10:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:19:07 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 1098)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:10:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:19:28 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 4.9ms | Allocations: 7545)
+
+
+Started GET "/students/1" for ::1 at 2022-12-28 21:19:53 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 4.7ms | Allocations: 7290)
+
+
+Started GET "/students/1" for ::1 at 2022-12-28 21:19:55 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 731)
+
+
+Started GET "/students/1" for ::1 at 2022-12-28 21:19:59 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 5.7ms | Allocations: 7255)
+
+
+Started GET "/students/1" for ::1 at 2022-12-28 21:19:59 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 732)
+
+
+Started GET "/students/1" for ::1 at 2022-12-28 21:20:00 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 730)
+
+
+Started GET "/students/2" for ::1 at 2022-12-28 21:20:03 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 775)
+
+
+Started GET "/students/2" for ::1 at 2022-12-28 21:20:11 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 774)
+
+
+Started GET "/students/2" for ::1 at 2022-12-28 21:20:12 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 774)
+
+
+Started GET "/students/1" for ::1 at 2022-12-28 21:20:14 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 730)
+
+
+Started GET "/students/1" for ::1 at 2022-12-28 21:20:32 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 4.8ms | Allocations: 8073)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:21:34 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 5.3ms | Allocations: 7856)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:21:34 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 1177)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:23:42 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 5.6ms | Allocations: 8072)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:23:43 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms | Allocations: 1175)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:24:34 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 4.5ms | Allocations: 8071)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:24:35 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 1174)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/" for ::1 at 2022-12-28 21:25:05 -0500
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 3149)
+
+
+  
+ActionView::MissingTemplate (Missing template students/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:4:in `index'
+Started GET "/students/" for ::1 at 2022-12-28 21:28:50 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 5.3ms | Allocations: 7442)
+
+
+Started GET "/students/1" for ::1 at 2022-12-28 21:28:54 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms | Allocations: 1773)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/student/1" for ::1 at 2022-12-28 21:28:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/student/1"):
+  
+Started GET "/students/1" for ::1 at 2022-12-28 21:29:02 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1227)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:30:12 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms | Allocations: 1116)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:31:15 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 4.5ms | Allocations: 7888)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:31:16 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms | Allocations: 1193)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:31:20 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 5.6ms | Allocations: 7903)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:31:46 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 4.0ms | Allocations: 9385)
+
+
+  
+NameError (undefined local variable or method `root_path' for #<StudentsController:0x000000000506b8>
+
+    redirect_to root_path
+                ^^^^^^^^^):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:31:47 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms | Allocations: 2783)
+
+
+  
+NameError (undefined local variable or method `root_path' for #<StudentsController:0x00000000050870>
+
+    redirect_to root_path
+                ^^^^^^^^^):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:31:54 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 5.6ms | Allocations: 7334)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/students_controller.rb:10:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:31:56 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 685)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/students_controller.rb:10:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:32:05 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.8ms | Allocations: 7133)
+
+
+Started GET "/" for ::1 at 2022-12-28 21:32:05 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 290)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 1924)
+
+
+Started GET "/" for ::1 at 2022-12-28 21:32:06 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 280)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 924)
+
+
+Started GET "/students" for ::1 at 2022-12-28 21:32:10 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1198)
+
+
+Started GET "/students/1" for ::1 at 2022-12-28 21:32:12 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 656)
+
+
+Started GET "/" for ::1 at 2022-12-28 21:32:12 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 218)
+
+
+Started GET "/students/1" for ::1 at 2022-12-28 21:32:23 -0500
+  
+SyntaxError (/Users/juliagrimes/Documents/Actualize/team-api/app/controllers/students_controller.rb:10: syntax error, unexpected ':', expecting `end'
+    template: "students/show"
+            ^
+):
+  
+app/controllers/students_controller.rb:10: syntax error, unexpected ':', expecting `end'
+app/controllers/students_controller.rb:10: syntax error, unexpected ':', expecting `end'
+Started GET "/students/1" for ::1 at 2022-12-28 21:32:34 -0500
+  
+SyntaxError (/Users/juliagrimes/Documents/Actualize/team-api/app/controllers/students_controller.rb:10: syntax error, unexpected `and', expecting `end'
+    and render template: "students/s...
+    ^~~
+):
+  
+app/controllers/students_controller.rb:10: syntax error, unexpected `and', expecting `end'
+app/controllers/students_controller.rb:10: syntax error, unexpected `and', expecting `end'
+Started GET "/students/1" for ::1 at 2022-12-28 21:32:53 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 5.9ms | Allocations: 8032)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:33:27 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 7.9ms | Allocations: 15796)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb, :jbuilder]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:33:28 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms | Allocations: 1261)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb, :jbuilder]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:33:30 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms | Allocations: 1136)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb, :jbuilder]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:33:31 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms | Allocations: 1136)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb, :jbuilder]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:33:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 8.0ms | Allocations: 15794)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb, :jbuilder]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:33:43 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms | Allocations: 1260)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb, :jbuilder]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:34:05 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 4.5ms | Allocations: 8119)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb, :jbuilder]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/1" for ::1 at 2022-12-28 21:34:06 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms | Allocations: 1216)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb, :jbuilder]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:34:08 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 1124)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb, :jbuilder]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:34:12 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms | Allocations: 1124)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb, :jbuilder]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:34:51 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 1566)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb, :jbuilder]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:9:in `show'
+Started GET "/students/2" for ::1 at 2022-12-28 21:36:15 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:23:in `show'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 4.6ms | Allocations: 8102)
+
+
+  
+ActionView::MissingTemplate (Missing template students/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jb, :jbuilder]}.
+
+Searched in:
+  * "/Users/juliagrimes/Documents/Actualize/team-api/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4/app/views"
+  * "/Users/juliagrimes/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4/app/views"
+):
+  
+app/controllers/students_controller.rb:24:in `show'
+Started GET "/students/2.json" for ::1 at 2022-12-28 21:36:18 -0500
+Processing by StudentsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:23:in `show'
+  Rendering students/show.json.jb
+  Rendered students/show.json.jb (Duration: 17.0ms | Allocations: 5463)
+  [1m[36mEducation Load (3.7ms)[0m  [1m[34mSELECT "educations".* FROM "educations" WHERE "educations"."student_id" = $1[0m  [["student_id", 2]]
+  ↳ app/controllers/students_controller.rb:24:in `show'
+  [1m[36mCapstone Load (0.3ms)[0m  [1m[34mSELECT "capstones".* FROM "capstones" WHERE "capstones"."student_id" = $1[0m  [["student_id", 2]]
+  ↳ app/controllers/students_controller.rb:24:in `show'
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills" WHERE "skills"."student_id" = $1[0m  [["student_id", 2]]
+  ↳ app/controllers/students_controller.rb:24:in `show'
+  [1m[36mExperience Load (0.5ms)[0m  [1m[34mSELECT "experiences".* FROM "experiences" WHERE "experiences"."student_id" = $1[0m  [["student_id", 2]]
+  ↳ app/controllers/students_controller.rb:24:in `show'
+Completed 200 OK in 50ms (Views: 36.0ms | ActiveRecord: 12.4ms | Allocations: 20807)
+
+
